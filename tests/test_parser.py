@@ -24,6 +24,15 @@ def test_parse_accepted_login():
     assert ev.ip_address == "192.168.1.10"
 
 
+def test_parse_iso8601_timestamp_format():
+    line = "2026-10-24T12:00:00+00:00 srv1 sshd[3001]: Accepted password for deployer from 10.0.0.9 port 49152 ssh2"
+    ev = parse_line(line)
+    assert ev is not None
+    assert ev.event_type == EventType.SUCCESSFUL_LOGIN
+    assert ev.username == "deployer"
+    assert ev.ip_address == "10.0.0.9"
+
+
 def test_parse_sudo_command():
     line = "Oct 24 08:16:30 srv1 sudo[1040]: ali : TTY=pts/0 ; PWD=/home/ali ; USER=root ; COMMAND=/bin/systemctl status nginx"
     ev = parse_line(line)
