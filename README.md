@@ -58,3 +58,7 @@ authlog-lens analyze /var/log/auth.log --format json -o incident.json
 ```bash
 pytest -v tests/
 ```
+---
+
+## Safe Use & Defensive Auditing Disclaimer
+*AuthLog Lens is a defensive security and log forensic tool designed strictly for authorized system administrators, security analysts, and incident responders to analyze authentication logs on systems they own or are explicitly authorized to audit.*
