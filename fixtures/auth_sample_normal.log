@@ -1,0 +1,4 @@
+Oct 24 08:15:01 srv1 sshd[1001]: Accepted publickey for ali from 192.168.1.10 port 52341 ssh2
+Oct 24 08:16:30 srv1 sudo[1040]: ali : TTY=pts/0 ; PWD=/home/ali ; USER=root ; COMMAND=/bin/systemctl status nginx
+Oct 24 09:22:14 srv1 sshd[1090]: Accepted publickey for deployer from 10.0.0.5 port 41238 ssh2
+Oct 24 10:05:00 srv1 sshd[1120]: Accepted password for ali from 192.168.1.10 port 53112 ssh2

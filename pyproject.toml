@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "authlog-lens"
+version = "1.0.0"
+description = "A defensive Linux authentication log analyzer and intrusion detection CLI."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ali Saleh"}
+]
+keywords = ["security", "siem", "ssh", "auth-log", "intrusion-detection", "blue-team", "devops"]
+
+[project.scripts]
+authlog-lens = "authlog_lens.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
